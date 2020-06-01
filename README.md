@@ -19,7 +19,7 @@ QUERIES: naam | type (beenworp,schouderworp,heupworp)  | moeilijkheidsgraad (mak
 [PUT REQUESTS]
 + api/v1/technieken/ ==> FromBody techniek aanpassen
 
-
+s	qs	qwd
 De andere controllers hebben identieke requests, alleen hebben ze geen queries zoals de main TechniekenController.
 
 BEVEILIGING: Indien men naar https://localhost:44377/api/token een POST REQUEST doet, dan krijgen we een JWT-token van de server. Als we dan deze in 
