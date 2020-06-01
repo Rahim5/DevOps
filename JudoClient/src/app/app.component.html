@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <h1>Judo Technieken</h1>
+
+    <div class="search">
+        <input class="inputIdTechniek" placeholder="TechiekId" [(ngModel)]="KrijgId" type="number" min="0" (input)="Zoek()">
+        <button class="buttonKrijgAlles" (click)="KrijgAlles()">KRIJG ALLE TECHNIEKEN</button> 
+    </div>
+
+    <div class="search">
+        <input class="inputIdTechniek" placeholder="TechniekNaam" [value]="krijgTechniek" type="text" >
+        <button class="buttonTechniek" (click)="KrijgTechniekOpNaam()">ZOEK TECHNIEK</button> 
+    </div>
+
+   
+    
+    <div class="verwijderDiv">
+        <input class="inputIdTechniek" [(ngModel)]="verwijderId" placeholder="TechiekId" type="number" min="0">
+        <button class="verwijderButton" (click)="VerwijderTechniek()">VERWIJDER TECHNIEK</button> 
+    </div>
+    
+    <p>Type:</p>
+    <select class="form-control" [(ngModel)]="counterType">
+        <option value="1">Beenworp</option>
+        <option value="2">Schouderworp</option>
+        <option value="3">Heupworp</option>
+        </select>
+
+      <p>Moeilijkheidsgraad:</p>
+      <select class="form-control" [(ngModel)]="counterGraad">
+        <option value="1">Makkelijk</option>
+        <option value="2">Gemiddeld</option>
+        <option value="3">Moeilijk</option>
+        </select>
+
+      <button (click)="filter()" id="filterButton" >FILTER</button>
+      
+     
+
+        <div class="pagination">
+            <a href="#"><button (click)="paginaZettenPrevious()">&laquo;</button></a>
+            <a href="#"><button (click)="paginaZetten1()">1</button></a>
+            <a href="#"><button (click)="paginaZetten2()">2</button></a>
+            <a href="#"><button (click)="paginaZetten3()">3</button></a>
+            <a href="#"><button (click)="paginaZetten4()">4</button></a>
+            <a href="#"><button (click)="paginaZetten5()">5</button></a>
+            <a href="#"><button (click)="paginaZetten6()">6</button></a>
+            <a href="#"><button (click)="paginaZettenNext()">&raquo;</button></a>
+          </div>
+  
+    <div>
+        <table id="techniekTabel" *ngIf="tabel1">
+            <tr>
+                <th>TechniekId</th>
+                <th>Naam</th>
+                <th>Type</th>
+                <th>Moeilijkheidsgraad</th>
+                <th>URL</th>
+                <th>Gordel</th>
+                <th>TechniekPersonen</th>
+            </tr>
+            <tr>
+                <td>{{KrijgId}}</td>
+                <td>{{naam}}</td>
+                <td>{{type}}</td>
+                <td>{{moeilijkheidsgraad}}</td>
+                <td><iframe  [src]="legitURL" 
+                    allowfullscreen="allowfullscreen" ></iframe> </td>
+                <td>gordel</td>
+                <td>techniekPersonen</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <table id="techniekTabel" *ngIf="tabel2">
+            <tr>
+                <th>TechniekId</th>
+                <th>Naam</th>
+                <th>Type</th>
+                <th>Moeilijkheidsgraad</th>
+                <th>URL</th>
+                <th>Gordel</th>
+                <th>TechniekPersonen</th>
+            </tr>
+            <tr *ngFor="let data of lijstTechnieken">
+                <td>{{data.techniekId}}</td>
+                <td>{{data.naam}}</td>
+                <td>{{data.type}}</td>
+                <td>{{data.moeilijkheidsgraad}}</td>
+                <td>data.url</td>
+                <td>data.gordel</td>
+                <td>data.techniekPersonen</td>
+            </tr>
+        </table>
+    </div>
+    
+    <div>
+        <table id="techniekTabel" >
+            <tr>
+                <th>TechniekId</th>
+                <th>Naam</th>
+                <th>Type</th>
+                <th>Moeilijkheidsgraad</th>
+                <th>URL</th>
+                <th>Gordel</th>
+                <th>TechniekPersonen</th>
+            </tr>
+            <tr>
+                <td>#</td>
+                <td><input [value]="inputNaam" type="text"></td>
+                <td><input [value]="inputType" type="text"></td>
+                <td><input [value]="inputGraad" type="text"></td>
+                <td>URL</td>
+                <td>gordel</td>
+                <td>techniekPersonen</td>
+            </tr>
+        </table>
+    </div>
+
+    <div>
+        <button id="filterButton" (click)="DataToevoegen()">POST</button>
+    </div>
+    <div>
+        <input class="inputIdTechniek" placeholder="TechiekId" [(ngModel)]="KrijgId" type="number" min="0"  placeholder="TechniekId">
+        <button (click)="DataAanpassen()" id="filterButton">UPDATE</button>
+    </div>
+    <button id="filterButton" (click)="inloggen()">LOGIN</button>
+    
+</body>
+</html>
+
+
+
+
+
+
+
