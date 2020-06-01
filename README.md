@@ -1,4 +1,4 @@
-
+dwqdqwd
 
 dasdqwd# JudoTechnieken
 Het idee was om een api te maken dat mij zou helpen tijdens de judo examens. Het is niet zo gemakkelijk om alle technieken van elke gordel te onthouden
