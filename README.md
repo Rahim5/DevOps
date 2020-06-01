@@ -47,7 +47,7 @@ ___________________________________________________3rd Party API________________
 
 Bedoeling was om automatisch video's van youtube te halen voor de technieken. Zodat men kon zien hoe een techniek werd uitgevoerd.
 
-Dit is hoe het eruit ziet: https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${naam}&key=AIzaSyAELPrFpHnuvoz0ou7W4XSVMKVecnWZoFI
+Dit is hoe het eruit ziet: https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=${naam}&key
 [maxResults]: Het aantal video's dat men vindt. Dit heb ik op 1 gezet, want ik wou maar 1 video per techniek.
 [q]=&{naam}: q is hier de zoekterm, dus dit moet gelijk zijn aan de naam van de techniek, die ik meegeef als parameter.
 [key]: Dit is de api-key om er gebruik van te maken.
