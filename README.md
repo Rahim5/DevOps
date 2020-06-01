@@ -25,7 +25,7 @@ De andere controllers hebben identieke requests, alleen hebben ze geen queries z
 BEVEILIGING: Indien men naar https://localhost:44377/api/token een POST REQUEST doet, dan krijgen we een JWT-token van de server. Als we dan deze in 
 de header meesturen met een GET-REQUEST, krijgen we toegang tot de beveiligde delen van de api. Maar deze heb ik uitgeschakeld omdat het niet werkt met de
 angular client.
-
+ asdasdas
 Deze gegevens moet je meesturen in de POST-REQUEST om een token te krijgen:
 "Email": "InventoryAdmin@abc.com",
 "Password": "$admin@2017"
