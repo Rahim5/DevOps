@@ -53,4 +53,4 @@ Dit is hoe het eruit ziet: https://www.googleapis.com/youtube/v3/search?part=sni
 In de html waren er problemen om de video te laten zien. Angular doet moeilijke met de url van de video's. Ik heb geprobeerd om met SafeResourceUrl te werken, maar dit is niet gelukt
 
 
-
+=extra
